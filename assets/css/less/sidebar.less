@@ -1,0 +1,18 @@
+.sidebar {
+	position: relative;
+	width: 90px;
+	height: 768px;
+	background-color: fade(@turquoise, 30%);
+
+	&:after {
+		position: absolute;
+		top: 0;
+		right: -1px;
+		content: "";
+		display: block;
+		width: 1px;
+		height: 100%;
+		background-color: fade(#C5BBC5, 30%);
+		box-shadow: 2px 2px 40px fade(@black, 0.65);
+	}
+}

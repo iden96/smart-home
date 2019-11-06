@@ -1,0 +1,66 @@
+.weather {
+	background-color: @white;
+	padding: 1rem 0.8rem;
+	position: absolute;
+	top: 2rem;
+	left: 2rem;
+	z-index: 1000;
+	line-height: 1;
+	width: 260px;
+	height: 260px;
+	border-radius: 15px;
+	box-shadow: 2px 2px 30px fade(@black, 20%);
+	
+	&__date {
+		margin-top: 0.3rem;
+		font-size: 1.2rem;
+	}
+	
+	&__info {
+		display: flex;
+		margin: 1.2rem 0;
+	}
+
+	&__value {
+		font-size: 4rem;
+		font-weight: 700;
+	}
+
+	&__description {
+		font-size: 1rem;
+		padding-top: 0.8rem;
+		padding-left: 0.5rem;
+	}
+
+	&__forecast {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__day {
+		width: 60px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__name {
+		font-size: 1.333rem;
+		margin-bottom: 1rem;
+	}
+
+	&__icon {
+		margin-bottom: 1rem;
+	}
+
+	&__temp {
+		font-size: 1rem;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__averageT {
+		margin-right: 0.6rem;
+	}
+}
