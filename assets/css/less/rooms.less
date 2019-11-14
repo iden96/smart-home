@@ -1,0 +1,77 @@
+.rooms {
+	background-color: @white;
+	box-shadow: 2px 2px 30px fade(@black, 20%);
+	padding: 1.2rem 0;
+	width: 580px;
+	height: 520px;
+	border-radius: 15px;
+	position: absolute;
+	top: 2rem;
+	right: 2rem;
+	
+	&__col {
+		display: flex;
+		justify-content: space-around;
+	}
+
+	&__item {
+		position: relative;
+		overflow: hidden;
+		border-radius: 15px;
+		background-color: @black;
+		width: 160px;
+		height: 220px;
+		transition: transform 0.2s linear;
+
+		&--bath {
+			background-color: #E7E9F0;
+		}
+
+		&--hall {
+			background-color: #BDDFF0;
+		}
+
+		&--bedroom {
+			background-color: #C5BBC5;
+		}
+	
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+
+	&__image {
+		height: 150px;
+		width: 145px;
+		position: absolute;
+		top: 1rem;
+		left: -3rem;
+
+		&--hall {
+			height: 71px;
+			top: 4rem;	
+		}
+
+		&--bedroom {
+			width: 126px;
+			height: 76px;
+			top: 3.8rem;
+			left: -2.2rem;
+		}
+	}
+
+	&__title {
+		position: absolute;
+		bottom: 3rem;
+		left: 1.6rem;
+		font-size: 1.5rem;
+	}
+
+	&__devices {
+		font-size: 1rem;
+		color: @gray;
+		position: absolute;
+		bottom: 1.45rem;
+		left: 1.8rem;
+	}
+}
