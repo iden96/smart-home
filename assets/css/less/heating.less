@@ -1,0 +1,89 @@
+.heating {
+	background-color: @white;
+	padding: 1rem .4rem;
+	position: absolute;
+	bottom: 1.33333rem;
+	left: 1.33333rem;
+	z-index: 1000;
+	line-height: 1;
+	width: 168px;
+	height: 168px;
+	border-radius: 10px;
+	box-shadow: 2px 2px 30px fade(@black, 20%);
+
+	&__label {
+		font-size: 1.3rem;
+		padding-bottom: 0.4rem;
+		margin-bottom: 1.8rem;
+		color: @black;
+		position: relative;
+		text-align: center;	
+
+		&:after {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 130px;
+			height: 2px;
+			background-color: @delimeter-main;
+		}
+	}
+
+	&__item {
+		margin-bottom: 0.8rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__name {
+		width: 50%;
+		margin-right: 0.6rem;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+	}
+
+	&__icon {
+		margin-right: 0.2rem;
+		height: 18px;
+		width: 18px;
+		fill: @black;
+	}
+
+	&__text {
+		font-size: 1rem;
+		font-weight: 700;
+	}
+
+	&__btn {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 80px;
+		height: 30px;
+		background-color: @white;
+		border-radius: 15px;
+		border: 1px solid @turquoise;
+		
+		&.active {
+			background-color: @turquoise;
+			.heating__btn__name {
+				color: @white;
+			}
+		}
+
+		&__name {
+			font-size: 1rem;
+			color: @black;
+		}
+	}
+
+}
