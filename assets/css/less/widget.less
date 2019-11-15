@@ -1,4 +1,4 @@
-.heating {
+.widget {
 	background-color: @white;
 	padding: 1rem .4rem;
 	position: absolute;
@@ -44,7 +44,7 @@
 	}
 
 	&__name {
-		width: 50%;
+		width: 43%;
 		margin-right: 0.6rem;
 		display: flex;
 		justify-content: flex-start;
@@ -52,14 +52,15 @@
 	}
 
 	&__icon {
-		margin-right: 0.2rem;
+		margin-right: 0.3rem;
 		height: 18px;
 		width: 18px;
+		max-width: 50%;
 		fill: @black;
 	}
 
 	&__text {
-		font-size: 1rem;
+		font-size: 0.9rem;
 		font-weight: 700;
 	}
 
@@ -75,7 +76,7 @@
 		
 		&.active {
 			background-color: @turquoise;
-			.heating__btn__name {
+			.widget__btn__name {
 				color: @white;
 			}
 		}
@@ -83,6 +84,19 @@
 		&__name {
 			font-size: 1rem;
 			color: @black;
+		}
+	}
+
+	&--floor {
+		width: 200px;
+		left: 13.85rem;
+
+		.widget__label:after {
+			width: 160px;
+		}
+
+		.widget__name {
+			width: 50%;
 		}
 	}
 
