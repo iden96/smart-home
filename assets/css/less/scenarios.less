@@ -1,0 +1,97 @@
+.scenarios {
+	background-color: @white;
+	padding: 1rem 0.3rem;
+	position: absolute;
+	top: 1.33333rem;
+	left: 20rem;
+	z-index: 1000;
+	line-height: 1;
+	width: 260px;
+	height: 260px;
+	border-radius: 15px;
+	box-shadow: 2px 2px 30px fade(@black, 20%);
+	
+	&__inner {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	&__label {
+		font-size: 1.3rem;
+		padding-bottom: 0.4rem;
+		margin-bottom: 1.8rem;
+		color: @black;
+		position: relative;
+		text-align: center;	
+
+		&:after {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 160px;
+			height: 2px;
+			background-color: @delimeter-main;
+		}
+	}
+
+	&__item {
+		margin-right: 0.6rem;
+		margin-bottom: 1.4rem;
+		display: flex;
+		align-items: center;
+		width: 120px;
+		height: 40px;
+		border-radius: 20px;
+		border: 1px solid @turquoise;
+
+		&:nth-child(2n) {
+			margin-right: 0;
+		}
+
+		&:last-child {
+			margin-right: 0;
+			margin-bottom: 0;
+		}
+
+		&.active {
+			background-color: @turquoise;
+
+			.scenarios__name {
+				order: 0;
+				color: @white;
+			} 
+		}
+	}
+
+	&__name {
+		flex-grow: 2;
+		order: 1;
+		display: flex;
+		justify-content: center;
+		font-size: 1rem;
+		color: @black;
+		transition: order .3s linear,
+					color .3s linear;
+	}
+
+	&__btn {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 38px;
+		height: 38px;
+		border-radius: 50%;
+		background-color: @dark-blue;
+	}
+
+	&__icon {
+		height: 20px;
+		width: 22px;
+		fill: @white;
+	}
+
+}
