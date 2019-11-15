@@ -1,20 +1,19 @@
 .rooms {
 	background-color: @white;
 	box-shadow: 2px 2px 30px fade(@black, 20%);
-	padding: 1.2rem 0;
-	width: 580px;
-	height: 520px;
-	border-radius: 15px;
+	padding: 1.2rem 1.33333rem;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
 	position: absolute;
-	top: 2rem;
-	right: 2rem;
-	
-	&__col {
-		display: flex;
-		justify-content: space-around;
-	}
+	left: 1.33333rem;
+	top: 20rem;
+	width: 894px;
+	height: 260px;
+	border-radius: 15px;
 
 	&__item {
+		margin-right: 1.33333rem;
 		position: relative;
 		overflow: hidden;
 		border-radius: 15px;
@@ -22,6 +21,10 @@
 		width: 160px;
 		height: 220px;
 		transition: transform 0.2s linear;
+		
+		&:last-child {
+			margin-right: 0;
+		}
 
 		&--bath {
 			background-color: #E7E9F0;
@@ -33,6 +36,14 @@
 
 		&--bedroom {
 			background-color: #C5BBC5;
+		}
+
+		&--kids {
+			background-color: #F1EACA;
+		}
+
+		&--restroom {
+			background-color: #D7E0DF;
 		}
 	
 		&:hover {
@@ -58,12 +69,55 @@
 			top: 3.8rem;
 			left: -2.2rem;
 		}
+
+		&--kids {
+			height: 130px;
+			width: 140px;
+			top: 1.8rem;
+			left: -2.4rem;
+		}
+
+		&--restroom { 
+			height: 100px;
+			width: 100px;
+			top: 2.9rem;
+			left: -1rem;
+		}
+	}
+
+	&__statusicons {
+		position: absolute;
+		top: 1.2rem;
+		right: .4rem;
+		display: flex;
+		flex-direction: column;
+
+		&__item {
+			margin-bottom: 0.5rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 28px;
+			height: 28px;
+			border-radius: 5px;
+			background-color: @dark-blue;
+
+			&.inactive {
+				opacity: .2;
+			}
+		}
+
+		&__icon {
+			width: 25px;
+			height: 25px;
+			fill: @white;
+		}
 	}
 
 	&__title {
 		position: absolute;
-		bottom: 3rem;
-		left: 1.6rem;
+		bottom: 1.6rem;
+		left: 1.4rem;
 		font-size: 1.5rem;
 	}
 
