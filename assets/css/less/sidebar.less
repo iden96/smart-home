@@ -1,8 +1,13 @@
 .sidebar {
+	padding: 1.2rem 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
 	position: relative;
 	width: 90px;
 	height: 768px;
-	background-color: fade(@turquoise, 30%);
+	background-color: fade(@gray-light, 30%);
 
 	&:after {
 		position: absolute;
@@ -14,5 +19,26 @@
 		height: 100%;
 		background-color: fade(#C5BBC5, 30%);
 		box-shadow: 2px 2px 40px fade(@black, 0.65);
+	}
+
+	&__item {
+		margin-bottom: 0.66666em;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 70px;
+		height: 70px;
+		border-radius: 50%;
+		background-color: fade(@gray-light, 50%);
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__icon {
+		width: 35px;
+		height: 33px;
+		fill: @turquoise;
 	}
 }
